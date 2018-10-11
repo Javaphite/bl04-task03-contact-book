@@ -4,6 +4,9 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Random;
 
+/**
+ * Model that implements "game of numbers" ("guess the number") logic.
+ */
 public class GameOfNumbersModel {
 
     private final int targetNumber;
@@ -12,6 +15,10 @@ public class GameOfNumbersModel {
 
     private Map<Integer, NumberGroup> turns;
 
+    /**
+     * Creates and configures new model, including target number random generation.
+     * @param initialMaximum upper bound for number to be guessed.
+     */
     public GameOfNumbersModel(int initialMaximum) {
         actualLowerBound = 0;
         actualUpperBound = initialMaximum;
@@ -20,6 +27,11 @@ public class GameOfNumbersModel {
         targetNumber = new Random().nextInt(actualUpperBound + 1);
     }
 
+    /**
+     * Compares input number with target one and made appropriate changes to model state.
+     * @param number value to be compared with target number.
+     * @return group for number (less, more or equal).
+     */
     public NumberGroup acceptTurn(int number) {
         NumberGroup turnResult = evaluateNumberGroup(number);
         turns.put(number, turnResult);
@@ -60,10 +72,10 @@ public class GameOfNumbersModel {
         return actualUpperBound;
     }
 
-    public int getTargetNumber() {
-        return targetNumber;
-    }
-
+    /**
+     * Forms table of turns.
+     * @return table of turns is string representation.
+     */
     public String getTableOfTurns() {
         StringBuilder table = new StringBuilder("PREVIOUS TURNS");
         String separator = System.lineSeparator();
@@ -80,6 +92,9 @@ public class GameOfNumbersModel {
         return table.toString();
     }
 
+    /**
+     *
+     */
     public enum NumberGroup {
         MORE ("Target number is more than your one."),
         LESS ("Target number is less than your one."),

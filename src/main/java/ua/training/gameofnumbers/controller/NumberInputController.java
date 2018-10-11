@@ -6,6 +6,9 @@ import ua.training.gameofnumbers.view.ConsoleView;
 import java.util.Objects;
 import java.util.Scanner;
 
+/**
+ * Controller class for GameOfNumberModel.
+ */
 public class NumberInputController {
 
     private static final String NAN_INPUT ="Please, enter integer number!";
@@ -21,6 +24,9 @@ public class NumberInputController {
         this.view = view;
     }
 
+    /**
+     * Encapsulates technical logic of interactions between user and model, model and view.
+     */
     public void makeTurn() {
         view.displayMessage(fillPlaceholders(TURN_TIP, model.getActualLowerBound(), model.getActualUpperBound()));
         view.displayMessage(model.getTableOfTurns());
