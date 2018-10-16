@@ -102,7 +102,7 @@
                             <transformers>
                                 <transformer implementation=
                                                      "org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                    <mainClass>ua.training.gameofnumbers.Application</mainClass>
+                                    <mainClass>ua.training.contactbook.Application</mainClass>
                                 </transformer>
                             </transformers>
                         </configuration>
