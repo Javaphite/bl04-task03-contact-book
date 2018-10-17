@@ -1,6 +1,6 @@
 package ua.training.contactbook;
 
-import ua.training.contactbook.controller.ContactController;
+import ua.training.contactbook.controllers.BaseController;
 import ua.training.contactbook.view.ConsoleView;
 
 import java.io.IOException;
@@ -9,8 +9,7 @@ public final class Application {
 
     public static void main(String[] args) throws IOException {
         ConsoleView view = new ConsoleView();
-        ContactController controller = new ContactController(view);
-        controller.processInput();
-
+        BaseController controller = new BaseController(view);
+        controller.process();
     }
 }
