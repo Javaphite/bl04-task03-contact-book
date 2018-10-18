@@ -5,6 +5,9 @@ import ua.training.contactbook.view.ConsoleView;
 
 import java.io.IOException;
 
+/**
+ * Enter point for Contact form processing application.
+ */
 public final class Application {
 
     public static void main(String[] args) throws IOException {

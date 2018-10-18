@@ -15,6 +15,9 @@ import java.util.stream.Collectors;
 
 import static ua.training.contactbook.localization.LocalizedField.*;
 
+/**
+ * Controller for reading, validation and building Contact entities of given inputs.
+ */
 public class ContactController extends EntityController<Contact> {
 
     private static final String FIELDS_BUNDLE_NAME = "fields";

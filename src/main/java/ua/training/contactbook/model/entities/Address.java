@@ -1,5 +1,8 @@
 package ua.training.contactbook.model.entities;
 
+/**
+ * Class to represent address as entity.
+ */
 public class Address {
 
     private String postCode;
@@ -60,6 +63,10 @@ public class Address {
                 .toString();
     }
 
+    /**
+     * Builds simple one-line string representation of address.
+     * @return one-line string representation of this entity
+     */
     public String asFlatText() {
         String separator = ", ";
         return new StringBuilder()

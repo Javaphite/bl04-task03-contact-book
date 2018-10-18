@@ -10,6 +10,11 @@ import java.util.regex.Pattern;
 import static ua.training.contactbook.localization.Message.INCORRECT_INPUT;
 import static ua.training.contactbook.localization.Message.INPUT;
 
+/**
+ * Defines family of entity building controllers.
+ * @param <T>
+ */
+
 public abstract class EntityController<T> {
 
     protected final Map<String, EntityField> fields;
@@ -17,27 +22,55 @@ public abstract class EntityController<T> {
 
     protected ConsoleView view;
 
-    public EntityController(ConsoleView view, Scanner scanner) {
+    /**
+     * Constructor for encapsulation of base initialization logic.
+     * @param view view to display messages on
+     * @param scanner scanner instance for input reading
+     */
+    protected EntityController(ConsoleView view, Scanner scanner) {
         this.view = view;
         this.scanner = scanner;
         this.fields = new LinkedHashMap<>();
     }
 
+    /**
+     * Prepares instance of entity of type associated with this Controller.
+     * @return instance of entity.
+     */
     public abstract T prepareEntity();
 
+    /**
+     * Registers field of entity to be processed with this controller.
+     * @param name field name
+     * @param hint hint for field
+     * @param pattern regular expression to validate field value
+     */
     protected void addEntityField(String name, String hint, Pattern pattern) {
         fields.put(name, new EntityField(name, hint, pattern));
     }
 
+    /**
+     * Clears all values of registered fields,
+     * makes this controller ready to be reused for new entity instance.
+     */
     protected void resetFieldsValues() {
         fields.values()
                 .forEach(entityField -> entityField.setValue(null));
     }
 
+    /**
+     * Unified getter for field values by fields names.
+     * @param fieldName
+     * @return currently stored value of field
+     */
     protected String getFieldValue(String fieldName) {
         return fields.get(fieldName).getValue();
     }
 
+    /**
+     * Asks and awaits input of given field using associated view and input source.
+     * @param field instance of entity field where received value will be stored
+     */
     protected void demandInput(EntityField field) {
         Pattern pattern = field.getPattern();
 
@@ -51,6 +84,9 @@ public abstract class EntityController<T> {
         field.setValue(scanner.next(pattern));
     }
 
+    /**
+     * Class for encapsulation entity field properties and value.
+     */
     protected static class EntityField {
 
         private final String name;

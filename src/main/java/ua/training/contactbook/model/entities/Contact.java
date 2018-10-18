@@ -2,6 +2,9 @@ package ua.training.contactbook.model.entities;
 
 import java.time.LocalDate;
 
+/**
+ * Class to represent contact (in note or contact-book, for example ) as entity.
+ */
 public class Contact {
 
     private String firstName;

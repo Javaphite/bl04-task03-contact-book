@@ -7,6 +7,9 @@ import java.util.Scanner;
 
 import static ua.training.contactbook.localization.Message.*;
 
+/**
+ * Controller for base input processing logic implementation.
+ */
 public class BaseController {
 
     ConsoleView view;

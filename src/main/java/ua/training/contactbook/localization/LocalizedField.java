@@ -1,5 +1,9 @@
 package ua.training.contactbook.localization;
 
+/**
+ * Encapsulates components of {@code properties} keys
+ * to get access for Contact fields localized properties values.
+ */
 public enum LocalizedField {
 
     FIRST_NAME("first-name"),
