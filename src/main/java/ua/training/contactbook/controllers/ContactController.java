@@ -87,7 +87,7 @@ public class ContactController extends EntityController<Contact> {
     }
 
     private String getFieldValue(LocalizedField field) {
-        String localizedFieldName = BUNDLE.getString(field.toString());
+        String localizedFieldName = BUNDLE.getString(field + ".value");
         return getFieldValue(localizedFieldName);
     }
 }

@@ -67,7 +67,7 @@ public class Address {
                 .append(city).append(separator)
                 .append(street).append(separator)
                 .append(buildingNumber).append(separator)
-                .append(roomNumber).append(separator)
+                .append(roomNumber)
                 .toString();
     }
 }
