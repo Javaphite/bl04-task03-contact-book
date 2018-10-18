@@ -30,10 +30,6 @@ public class ConsoleView {
         }
     }
 
-    public void displayMessage(Message messageTemplate, String field) {
-        displayMessage(buildMessage(messageTemplate, field, ""));
-    }
-
     public void displayMessage(Message messageTemplate, String field, String hint) {
         displayMessage(buildMessage(messageTemplate, field, hint));
     }
