@@ -1,4 +1,4 @@
-package ua.training.contactbook.view;
+package ua.training.contactbook.localization;
 
 public enum Message {
     INTRODUCTION("info.introduction"),
