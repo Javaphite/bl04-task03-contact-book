@@ -1,6 +1,6 @@
 package ua.training.contactbook.view;
 
-import ua.training.contactbook.controllers.BaseController;
+import ua.training.contactbook.localization.Message;
 
 import java.util.Locale;
 import java.util.ResourceBundle;

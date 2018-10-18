@@ -26,7 +26,7 @@ public class Contact {
         FRIEND,
         COLLEAGUE,
         RELATIVE,
-        INSIDER;
+        IGNORED;
     }
 
     public String getFirstName() {
@@ -85,14 +85,8 @@ public class Contact {
         this.group = group;
     }
 
-    public void setGroup(String group) {
-        switch (group.toLowerCase()) {
-            case "friend": this.group = Group.FRIEND; break;
-            case "colleague": this.group = Group.COLLEAGUE; break;
-            case "relative": this.group = Group.RELATIVE; break;
-            case "insider": this.group = Group.INSIDER; break;
-            default: this.group = Group.DEFAULT;
-        }
+    public void setGroup(String groupName) {
+      group = Group.valueOf(groupName);
     }
 
     public String getHomeTelephone() {
