@@ -2,13 +2,13 @@ package ua.training.contactbook.controllers;
 
 import ua.training.contactbook.view.ConsoleView;
 
+import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Scanner;
-import java.util.TreeMap;
 import java.util.regex.Pattern;
 
-import static ua.training.contactbook.view.Message.INCORRECT_INPUT;
-import static ua.training.contactbook.view.Message.INPUT;
+import static ua.training.contactbook.localization.Message.INCORRECT_INPUT;
+import static ua.training.contactbook.localization.Message.INPUT;
 
 public abstract class EntityController<T> {
 
@@ -20,7 +20,7 @@ public abstract class EntityController<T> {
     public EntityController(ConsoleView view, Scanner scanner) {
         this.view = view;
         this.scanner = scanner;
-        this.fields = new TreeMap<>();
+        this.fields = new LinkedHashMap<>();
     }
 
     public abstract T prepareEntity();
