@@ -5,7 +5,7 @@ import ua.training.contactbook.view.ConsoleView;
 
 import java.util.Scanner;
 
-import static ua.training.contactbook.view.Message.*;
+import static ua.training.contactbook.localization.Message.*;
 
 public class BaseController {
 
@@ -19,10 +19,11 @@ public class BaseController {
         view.displayMessage(INTRODUCTION);
         view.displayMessage(NEW_CONTACT);
 
-        Scanner scanner = new Scanner(System.in);
-        Contact contact = new ContactController(view, scanner).prepareEntity();
+        try (Scanner scanner = new Scanner(System.in)) {
+            Contact contact = new ContactController(view, scanner).prepareEntity();
 
-        view.displayMessage(SHOW_CONTACT);
-        view.displayMessage(contact);
+            view.displayMessage(SHOW_CONTACT);
+            view.displayMessage(contact);
+        }
     }
 }
