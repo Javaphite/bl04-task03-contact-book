@@ -3,16 +3,17 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>ua.training</groupId>
-    <artifactId>bl02-task02-game-of-numbers</artifactId>
+    <artifactId>bl04-task03-contact-book</artifactId>
     <packaging>jar</packaging>
     <version>0.1-SNAPSHOT</version>
-    <name>bl02-task02-game-of-numbers</name>
+    <name>bl04-task03-contact-book</name>
 
     <properties>
         <slf4j-api.version>1.7.25</slf4j-api.version>
         <logback.version>1.2.3</logback.version>
         <junit.jupiter.version>5.2.0</junit.jupiter.version>
         <junit.platform.version>1.2.0</junit.platform.version>
+        <mockito.version>2.23.0</mockito.version>
     </properties>
 
     <dependencies>
@@ -27,6 +28,13 @@
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-params</artifactId>
             <version>${junit.jupiter.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-junit-jupiter</artifactId>
+            <version>${mockito.version}</version>
             <scope>test</scope>
         </dependency>
 
