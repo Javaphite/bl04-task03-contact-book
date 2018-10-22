@@ -60,11 +60,20 @@ public abstract class EntityController<T> {
 
     /**
      * Unified getter for field values by fields names.
-     * @param fieldName
+     * @param fieldName name of field which value should be returned
      * @return currently stored value of field
      */
     protected String getFieldValue(String fieldName) {
         return fields.get(fieldName).getValue();
+    }
+
+    /**
+     * Unified getter for fields by fields names.
+     * @param fieldName name of field which instance should be returned
+     * @return instance of {@link EntityField} for given name
+     */
+    protected EntityField getField(String fieldName) {
+        return fields.get(fieldName);
     }
 
     /**
