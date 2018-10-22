@@ -6,7 +6,6 @@ import ua.training.contactbook.model.services.ContactService;
 import ua.training.contactbook.model.storage.ContactBook;
 import ua.training.contactbook.view.ConsoleView;
 
-import java.io.IOException;
 import java.util.Arrays;
 
 /**

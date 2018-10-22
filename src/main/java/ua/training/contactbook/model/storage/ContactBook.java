@@ -15,7 +15,7 @@ public class ContactBook {
     }
 
     // TODO: add JavaDoc
-    public void add(Contact contact) throws NicknameNotUniqueException {
+    public void add(Contact contact) {
         if (contacts.containsKey(contact.getNickName())) {
             throw new NicknameNotUniqueException("This nickname already in use! Please try another one.");
         }
