@@ -21,6 +21,7 @@ public class BaseController {
         this.service = service;
     }
 
+    // TODO: add JavaDoc
     public void process() {
         view.displayMessage(INTRODUCTION);
         view.displayMessage(NEW_CONTACT);
