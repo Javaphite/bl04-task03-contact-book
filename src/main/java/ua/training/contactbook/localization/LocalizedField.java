@@ -2,7 +2,7 @@ package ua.training.contactbook.localization;
 
 /**
  * Encapsulates components of {@code properties} keys
- * to get access for Contact fields localized properties values.
+ * to get storage for Contact fields localized properties values.
  */
 public enum LocalizedField {
 
@@ -25,14 +25,14 @@ public enum LocalizedField {
     DATE_CREATED("date-created"),
     DATE_UPDATED("date-updated");
 
-    LocalizedField(String name) {
-        this.name = name;
+    LocalizedField(String fieldName) {
+        this.fieldName = fieldName;
     }
 
-    private final String name;
+    private final String fieldName;
 
     @Override
     public String toString() {
-        return name;
+        return fieldName;
     }
 }
