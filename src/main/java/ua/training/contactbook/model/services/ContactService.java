@@ -11,7 +11,10 @@ public class ContactService {
         this.book = book;
     }
 
-    // TODO: add JavaDoc
+    /**
+     * Sends given contact to {@link ContactBook} associated with this ContactService.
+     * @param contact {@link Contact} to be added to book
+     */
     public void addContact(Contact contact) {
         book.add(contact);
     }

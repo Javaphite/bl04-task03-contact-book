@@ -21,7 +21,9 @@ public class BaseController {
         this.service = service;
     }
 
-    // TODO: add JavaDoc
+    /**
+     * Initiates interactions with user in order to create and register new contact.
+     */
     public void process() {
         view.displayMessage(INTRODUCTION);
         view.displayMessage(NEW_CONTACT);

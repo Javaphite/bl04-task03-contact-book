@@ -46,7 +46,11 @@ public class ContactController extends EntityController<Contact> {
         return buildContact();
     }
 
-    // TODO: add javaDocs
+    /**
+     * Makes try to add contact to storage using service associated with this controller
+     * and initiates required contact changes if any troubles occurred during mentioned operation.
+     * @param contact {@link Contact} to process
+     */
     public void acceptContact(Contact contact) {
         try {
            service.addContact(contact);

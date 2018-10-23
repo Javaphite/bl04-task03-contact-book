@@ -14,7 +14,11 @@ public class ContactBook {
         contacts = new HashMap<>();
     }
 
-    // TODO: add JavaDoc
+    /**
+     * Adds given contact to this ContactBook.
+     * @param contact {@link Contact} to add
+     * @throws NicknameNotUniqueException if nickname of {@code contact} already exists in storage.
+     */
     public void add(Contact contact) {
         if (contacts.containsKey(contact.getNickName())) {
             throw new NicknameNotUniqueException("This nickname already in use! Please try another one.");

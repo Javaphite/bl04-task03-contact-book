@@ -94,7 +94,7 @@ public abstract class EntityController<T> {
     }
 
     /**
-     * Class for encapsulation entity field properties and value.
+     * Encapsulates entity field properties and value.
      */
     protected static class EntityField {
 
