@@ -1,13 +1,13 @@
-package ua.training.contactbook.controllers;
+package ua.training.contactbook.model.services;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
+import ua.training.contactbook.controllers.ContactController;
 import ua.training.contactbook.model.entities.Contact;
 import ua.training.contactbook.model.exceptions.NicknameNotUniqueException;
-import ua.training.contactbook.model.services.ContactService;
 import ua.training.contactbook.model.storage.ContactBook;
 import ua.training.contactbook.view.ConsoleView;
 import ua.training.logger.TestLifecycleLogger;
@@ -48,14 +48,14 @@ class ContactServiceTest extends TestLifecycleLogger {
     }
 
     private String getIncorrectDataExample() {
-        String[] incorrectData = {"Sarah", "Connor", "D.",  "Sarah101", "comment", "DEFAULT",
+        String[] incorrectData = {"Сара", "Коннор", "D.",  "Sarah101", "comment", "DEFAULT",
                                     "+123121414", "+123121416", "-", "sarah@gmail.com", "sarah", "02345",
                                     "York", "Main", "3A", "12", "2010-10-10", "2010-10-10"};
         return Arrays.stream(incorrectData).collect(Collectors.joining(System.lineSeparator()));
     }
 
     private String getCorrectDataExample() {
-        String[] correctData = {"Sarah", "Connor", "D.",  "SarahConnor", "comment", "DEFAULT",
+        String[] correctData = {"Сара", "Коннор", "D.",  "SarahConnor", "comment", "DEFAULT",
                 "+123121414", "+123121416", "-", "sarah@gmail.com", "sarah", "02345",
                 "York", "Main", "3A", "12", "2010-10-10", "2010-10-10"};
         return Arrays.stream(correctData).collect(Collectors.joining(System.lineSeparator()));
